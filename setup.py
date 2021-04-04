@@ -16,8 +16,10 @@ setuptools.setup(
     package_dir={'': 'src'},
     python_requires='>=3.6',
     install_requires=[
-        'torch<=1.7.1',
-        'transformers>=4', # changed
+        #'torch<=1.7.1',
+        'torch<=1.4',
+        #'transformers<=3.5.1',
+        'transformers>=4',
         'sklearn',
         'nltk',
         'pandas',
