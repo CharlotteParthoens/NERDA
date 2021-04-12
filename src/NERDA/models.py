@@ -307,7 +307,7 @@ class NERDA:
                                      y_true = dataset.get('tags'),
                                      labels = self.tag_scheme,
                                      average = 'micro')
-        f1_micro = pd.DataFrame({'Level' : ['AVG_MICRO'], 'F1-Score': [f1_micro[2]]})
+        f1_micro = pd.DataFrame({'Level' : ['AVG_MICRO'], 'Precision': [f1_micro[0]], 'Recall': [f1_micro[1]], 'F1-Score': [f1_micro[2]]})
         df = df.append(f1_micro)
 
         # compute MACRO-averaged F1-scores and add to table.
@@ -315,7 +315,7 @@ class NERDA:
                                      y_true = dataset.get('tags'),
                                      labels = self.tag_scheme,
                                      average = 'macro')
-        f1_macro = pd.DataFrame({'Level' : ['AVG_MACRO'], 'F1-Score': [f1_macro[2]]})
+        f1_macro = pd.DataFrame({'Level' : ['AVG_MACRO'], 'Precision': [f1_macro[0]], 'Recall': [f1_macro[1]], 'F1-Score': [f1_macro[2]]})
         df = df.append(f1_macro)
       
         return df
