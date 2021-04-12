@@ -299,8 +299,8 @@ class NERDA:
                                average = None)
         
         # create DataFrame with performance scores (=F1)
-        df = list(zip(self.tag_scheme, f1[2]))
-        df = pd.DataFrame(df, columns = ['Level', 'F1-Score'])    
+        df = list(zip(self.tag_scheme, f1[0], f1[1], f1[2])) # precision, recall, f1
+        df = pd.DataFrame(df, columns = ['Level', 'Precision', 'Recall', 'F1-Score'])    
         
         # compute MICRO-averaged F1-scores and add to table.
         f1_micro = compute_f1_scores(y_pred = tags_predicted, 
