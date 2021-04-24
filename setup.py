@@ -4,10 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="NERDA", 
+    name="adapted_NERDA", 
     version="0.8.7",
     author="Lars Kjeldgaard, Lukas Christian Nielsen",
-    author_email="lars.kjeldgaard@eb.dk",
+    author_email="charlotte.parthoens1gmail.com",
     description="A Framework for Finetuning Transformers for Named-Entity Recognition",
     long_description=long_description,
     long_description_content_type="text/markdown",
